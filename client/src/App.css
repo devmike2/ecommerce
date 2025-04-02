@@ -1,0 +1,21 @@
+@import "tailwindcss";
+
+
+.admin{
+    box-shadow: 5px 0px 5px rgba(0, 0, 0,0.2);
+}
+.tabledata thead th{ 
+    @apply font-normal border-r-2 border-b-2
+}
+.tabledata tbody tr td{ 
+    @apply  border-r-2 border-b-2
+}
+.tabledata tbody tr td{ 
+    @apply text-center
+}
+.tabledata tbody tr td span{ 
+    @apply text-center
+}
+.scroll-none::-webkit-scrollbar{
+    display: none;
+}
