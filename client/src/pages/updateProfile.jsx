@@ -1,7 +1,7 @@
 const Updateprofile = () => {
     return (
         <div>
-            Hello
+            <h2>Under development</h2>
         </div>
       );
 }

@@ -11,6 +11,7 @@ import Allproducts from "../pages/allProducts";
 import CategoryPage from "../pages/categorypage";
 import ProductDetails from "../pages/ProductDetails";
 import AddToCart from "../pages/AddToCart";
+import Payment from "../pages/payment";
 const router = createBrowserRouter([
     {
         path: '/',
@@ -47,6 +48,10 @@ const router = createBrowserRouter([
             {
                 path: 'add-to-cart',
                 element: <AddToCart />
+            },
+            {
+                path: 'payment',
+                element: <Payment />
             },
             {
                 path: 'adminpage',
