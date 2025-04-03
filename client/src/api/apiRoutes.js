@@ -1,6 +1,6 @@
 
 
-const backendDomain = `${import.meta.env.VITE_BACKEND_URL}`
+const backendDomain = `${import.meta.env.VITE_BACKEND_URL}/api/`
 
 const routeApi = {
     signupAPI: {
