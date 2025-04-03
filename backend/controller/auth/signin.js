@@ -35,6 +35,7 @@ const  userSigninController = async (req, res) => {
                 const token = createToken(user._id)
                 res.cookie('jwt', token, {
                     httpOnly: true,
+                    secure: true,
                     maxAge: maxAge * 1000
                 })
                 res.status(201).json({
