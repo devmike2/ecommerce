@@ -41,6 +41,7 @@ const userSignup = async (req, res) =>{
         res.cookie('jwt', token, {
             httpOnly: true,
             secure: true,
+            sameSite: "none",
             maxAge: maxAge * 1000
         })
         res.status(201).json({
