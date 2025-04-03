@@ -12,7 +12,7 @@ port = 8080 || process.env.PORT
 // middleware
 app.use(express.json())
 app.use(cors({
-    origin: "https://ecommerce-uurk.vercel.app/",
+    origin: "*",
     credentials: true,
     methods: "GET, POST, PUT, PATCH, DELETE, OPTIONS",
     allowedHeaders: "Content-Type, Authorization"
