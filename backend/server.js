@@ -13,7 +13,9 @@ port = 8080 || process.env.PORT
 app.use(express.json())
 app.use(cors({
     origin: process.env.FRONTEND_URL,
-    credentials: true
+    credentials: true,
+    methods: "GET, POST, PUT, PATCH, DELETE, OPTIONS",
+    allowedHeaders: "Content-Type, Authorization"
 }))
 app.use(cookieParser())
 
@@ -22,7 +24,7 @@ app.use( (req, res , next) =>{
     next()
 })
 
-app.use('/api/', apiRoutes)
+app.use('/api', apiRoutes)
 
 
 connectDB().then((result) =>{
