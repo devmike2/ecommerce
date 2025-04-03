@@ -40,6 +40,7 @@ const userSignup = async (req, res) =>{
         const token = createToken(newUser._id)
         res.cookie('jwt', token, {
             httpOnly: true,
+            secure: process.env.NODE_ENV === "production",
             maxAge: maxAge * 1000
         })
         res.status(201).json({
