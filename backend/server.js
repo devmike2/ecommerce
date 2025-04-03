@@ -9,10 +9,22 @@ const apiRoutes = require('./Routes/apiRoutes')
 const app = express()
 port = 8080 || process.env.PORT
 
+const allowedOrigins = [
+    process.env.FRONTEND_URL, 
+    "https://ecommerce-uurk.vercel.app",
+    "https://ecommerce-beta.vercel.app"
+];
+
 // middleware
 app.use(express.json())
 app.use(cors({
-    origin: "*",
+    origin: (origin, callback) => {
+        if (!origin || allowedOrigins.includes(origin)) {
+            callback(null, origin);
+        } else {
+            callback(new Error("CORS not allowed"));
+        }
+    },
     credentials: true,
     methods: "GET, POST, PUT, PATCH, DELETE, OPTIONS",
     allowedHeaders: "Content-Type, Authorization"
