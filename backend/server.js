@@ -30,3 +30,4 @@ connectDB().then((result) =>{
     console.log(`Connected to DB and listening to request on port ${port}`)
 })
 
+module.exports = app
